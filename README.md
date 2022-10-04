@@ -1,7 +1,7 @@
 
 # Project Desc
 
-A example Docker powered boilerplate of using postgre sql and postgis with golang
+A example Docker powered boilerplate of using postgresql and postgis with golang
 
 
 ## Tech Stack

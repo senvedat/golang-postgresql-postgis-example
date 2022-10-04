@@ -8,7 +8,7 @@ A example Docker powered boilerplate of using postgresql and postgis with golang
 
 **Software Language:** Golang
 
-**Framework:** Gin Framework (Just routes, and in a few simple place)
+**Framework:** Gin Framework (Just routes, and in a few simple parts)
 
 **Database Type:** PostgreSQL
 

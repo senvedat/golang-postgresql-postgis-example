@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  postgres_db:
+    container_name: project-vdt-db
+    image: mdillon/postgis:latest
+    environment:
+      - POSTGRES_USER=${MASTER_DB_USER}
+      - POSTGRES_PASSWORD=${MASTER_DB_PASSWORD}
+      - POSTGRES_DB=${MASTER_DB_NAME}
+      - POSTGRES_PORT=${MASTER_DB_PORT}
+    volumes:
+      - prod_postgres_data:/var/lib/postgresql/data/
+    ports:
+      - ${MASTER_DB_PORT}:${MASTER_DB_PORT}
+    restart: always
+
+  server:
+    container_name: project-vdt-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    depends_on:
+      - postgres_db
+    links:
+      - postgres_db:postgres_db
+    restart: on-failure
+
+volumes:
+  prod_postgres_data:

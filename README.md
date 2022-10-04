@@ -1,1 +1,23 @@
-# golang-postgresql-postgis-example
+
+# Project Desc
+
+A example Docker powered boilerplate of using postgre sql and postgis with golang
+
+
+## Tech Stack
+
+**Software Language:** Golang
+
+**Framework:** Gin Framework (Just routes, and in a few simple place)
+
+**Database Type:** PostgreSQL
+
+**Database Extension:** PostGIS
+
+**Extras:** Docker
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
